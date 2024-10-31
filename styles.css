@@ -1,0 +1,265 @@
+@font-face {
+  font-family: 'Regal Love';
+  src: url('fonts/Regal Love.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Simple Alphabet';
+  src: url('fonts/Simple Alphabet.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('fonts/AvenirLTStd-Roman.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('fonts/AvenirLTStd-Oblique.otf') format('opentype');
+  font-weight: normal;
+  font-style: oblique;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('fonts/AvenirLTStd-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('fonts/AvenirLTStd-MediumOblique.otf') format('opentype');
+  font-weight: 500;
+  font-style: oblique;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #FEFAEF;
+  color: #5a3e2b;
+}
+.header-container{
+  text-align: center;
+  margin-top: 13rem;
+}
+
+
+.context-container {
+  background-image: url("img/bg.png");
+  background-size: cover;
+  background-position: center;
+  padding: 0 5rem;
+  height: 30vh;
+}
+.invi-header{
+  font-size: 1rem;
+  line-height: 1.2rem;
+  padding: 0 15rem;
+}
+.name {
+  font-family: 'Regal Love', 'Great Vibes', cursive;
+  font-size: 10rem;
+  line-height: 8.5rem;
+  padding: 0 5rem;
+  margin-top: 5rem;
+}
+.date-container{
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.date {
+  font-family: 'Simple Alphabet', 'Great Vibes';
+  font-size: 3rem;
+  line-height: 0;
+}
+.date-num {
+  font-family: 'Simple Alphabet', 'Great Vibes';
+  font-size: 7rem;
+  margin: 0;
+  margin: 0 1rem;
+}
+.date-time {
+  font-family: 'Simple Alphabet', 'Great Vibes';
+  font-size: 2rem;
+  border-top: 1px solid #5a3e2b;
+  border-bottom: 1px solid #5a3e2b;
+  margin: 0;
+}
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+
+
+.events-container{
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 25px;
+}
+
+.navigate-track{
+  display: flex;
+}
+.maps-container{
+  margin-top: 3rem;
+  font-size: 1.3rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #4a4a4a;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  background-color: white;
+  cursor: pointer;
+}
+.button img {
+  width: 50px;
+  height: 50px;
+}
+.button span {
+  flex-grow: 1;
+  text-align: center;
+  color: #057a00;
+  font-size: 1.3rem;
+}
+.button i {
+  color: #5a3e2b;
+}
+.rsvp-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.rsvp-title {
+  font-family: 'Simple Alphabet', 'Great Vibes';
+  font-size: 2.5rem;
+  font-weight: 700;
+  top:-41px;
+  right: inherit;
+  padding: 1rem;
+  position: absolute;
+  background-color: #FEFAEF;
+}
+
+
+.rsvp-container{
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 1rem;
+}
+
+.rsvp-section img {
+  width: 100px;
+  height: 100px;
+}
+.rsvp-section p {
+  margin-top: 0.5rem;
+  font-size: 23px;
+}
+.rsvp-section p span {
+  display: block;
+  font-size: 0.875rem;
+  color: #5a3e2b;
+}
+
+.attend-text{
+  font-family: 'Simple Alphabet', 'Great Vibes';
+  font-size: 1rem;
+  line-height: 1;
+
+}
+.form-section {
+  position: relative;
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 3rem;
+  width: 725px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.3); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+  border-radius: 10px;
+  backdrop-filter: blur(8px); 
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.form-section select {
+  width: 10%;
+  max-width: 300px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #5a3e2b;
+  border-radius: 0.25rem;
+
+}
+.form-section input {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #5a3e2b;
+  border-radius: 0.25rem;
+}
+
+.input-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.form-section .yes-no-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.form-section .yes-no-buttons button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #4a4a4a;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.divider {
+  border-top: 3px solid #5a3e2b;
+  margin: 1rem 0;
+  width: 200px;
+}
+
+.button-form{
+  border: 1px solid green;
+  background-color: green;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 10px;
+}
+
+.selected {
+  background-color: #008829; 
+  border: 2px solid #4CAF50; 
+  color: white;
+}
+
+.footer-container{
+  padding-bottom: 5rem;
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle; 
+  display: inline-block;
+}
