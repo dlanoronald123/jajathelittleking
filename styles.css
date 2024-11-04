@@ -345,8 +345,24 @@ align-items: center;
   }
 }
 
-/* Apply animation class */
 .fade-down {
   display: block;
   animation: fadeDown 0.8s ease forwards;
+}
+
+
+@keyframes button-click {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.attendance-button.clicked {
+  animation: button-click 0.3s ease-in-out;
 }

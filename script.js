@@ -1,20 +1,20 @@
 function updateAttendance(selectedButton) {
-  // Get all attendance buttons
   const buttons = document.querySelectorAll('.attendance-button');
   const optionalElements = document.getElementById('optional-elements');
   const optionalElements2 = document.getElementById('optional-elements2');
   const adventureNote = document.getElementById('adventure-note');
 
+  buttons.forEach(btn => btn.classList.remove('clicked'));
+
   buttons.forEach(button => {
     const img = button.querySelector('img');
     
-    // Check if the current button is the selected one
     if (button === selectedButton) {
       img.src = 'img/yes.png';
+      button.classList.add('clicked');
       button.classList.add('selected');
       document.getElementById("attendance-value").value = button.value;
       
-      // Show/hide elements based on attendance choice
       if (button.value === 'yes') {
         optionalElements.style.display = 'block';
         optionalElements2.style.display = 'block';
@@ -26,6 +26,7 @@ function updateAttendance(selectedButton) {
       }
     } else {
       img.src = 'img/no.png';
+      button.classList.remove('clicked');
       button.classList.remove('selected');
     }
   });
@@ -53,10 +54,16 @@ function handleSelectChangeCalendar(event) {
 function selectButton(selectedButton) {
   const optionalElements3 = document.getElementById('optional-elements3');
   const buttons = document.querySelectorAll('.rsvp-button');
-
   buttons.forEach(button => button.classList.remove('clicked'));
 
+  buttons.forEach(button => {
+    if (button === selectedButton) {
+      document.getElementById("cubs-value").value = button.value;
+    }
+  });
   selectedButton.classList.add('clicked');
+
+  buttons.value = selectedButton.value;
 
   if (selectedButton.value === 'yes') {
     optionalElements3.style.display = 'block';
@@ -68,9 +75,11 @@ function selectButton(selectedButton) {
 }
 
 document.getElementById("form").addEventListener("submit", function (e) {
-  const cubs = document.querySelectorAll('.cubs');
-
-  e.preventDefault();  // Prevent default form submission
+  const cubs = document.querySelectorAll('.rsvp-button');
+  const attendance = document.querySelectorAll('.attendance-button');
+  console.log(attendance.value)
+  console.log(cubs.value)
+  e.preventDefault();  
   document.getElementById("message").textContent = "Submitting..";
   document.getElementById("message").style.display = "block";
   document.getElementById("submit-button").disabled = true;
@@ -86,7 +95,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
 
   // Send POST request
   fetch(
-    "https://script.google.com/macros/s/AKfycbx3xxXssvLTWSc0Y8vXheXJ8ibj-yoSB38vWtia7wEm6otay1MvV7xWsF49DDWqL8xN7g/exec",
+    "https://script.google.com/macros/s/AKfycbxt7POQ_ldWzfLi8GogxCeKNkOJKHhzz3FK8nohs9ByRV9JiWp7OcBxik59yNVycvwIXQ/exec",
     {
       redirect: "follow",
       method: "POST",
@@ -99,7 +108,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     .then(response => response ? response : Promise.reject("Failed to submit the form"))
     .then(data => {
       document.getElementById("message").textContent = "Data submitted successfully!";
-      document.getElementById("message").style.backgroundColor = "brown";
+      document.getElementById("message").style.backgroundColor = "green";
       document.getElementById("message").style.color = "beige";
       document.getElementById("submit-button").disabled = false;
       document.getElementById("form").reset();
