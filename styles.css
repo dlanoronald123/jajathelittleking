@@ -30,6 +30,20 @@
   font-weight: 500;
   font-style: oblique;
 }
+@font-face {
+  font-family: 'Avenir LT Std Heavy';
+  src: url('fonts/AvenirLTStd-Heavy.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Antipasto Pro';
+  src: url('fonts/AntipastoPro-Bold_trial.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Antipasto Pro Bold';
+  src: url('fonts/AntipastoPro-ExtraBold_trial.ttf') format('opentype');
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -101,6 +115,11 @@ body {
   margin-bottom: 3rem;
   text-align: center;
   font-size: 25px;
+  font-family: 'Avenir LT Std';
+}
+
+.events-title{
+  font-family: 'Avenir LT Std Heavy';
 }
 
 .navigate-track{
@@ -141,11 +160,10 @@ body {
 }
 
 .rsvp-title {
-  font-family: 'Simple Alphabet', 'Great Vibes';
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-family: 'Antipasto Pro Bold';
+  font-size: 3rem;
   top:-41px;
-  right: inherit;
+  right: 333px;
   padding: 1rem;
   position: absolute;
   background-color: #FEFAEF;
@@ -162,10 +180,37 @@ body {
   width: 100px;
   height: 100px;
 }
-.rsvp-section p {
-  margin-top: 0.5rem;
-  font-size: 23px;
+
+.attendance-img{
+  width: 7rem;
+  height: 7rem
 }
+.kindly-text {
+  font-family: 'Avenir LT Std';
+  margin-top: 0.5rem;
+  font-size: 18px;
+  font-weight: 400;
+}
+.form-text {
+  font-family: 'Antipasto Pro';
+  padding-top: 1.5rem;
+  font-size: 23px;
+  font-weight: 700;
+  color: #4A772F;
+}
+.will-text {
+  font-family: 'Antipasto Pro';
+  margin-top: 2rem;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.adventure-text{
+  font-family: 'Antipasto Pro';
+  font-size: 23px;
+  font-weight: 700;
+}
+
 .rsvp-section p span {
   display: block;
   font-size: 0.875rem;
@@ -174,7 +219,7 @@ body {
 
 .attend-text{
   font-family: 'Simple Alphabet', 'Great Vibes';
-  font-size: 1rem;
+  font-size: 1.6rem;
   line-height: 1;
 
 }
@@ -184,7 +229,7 @@ body {
   text-align: center;
   margin-bottom: 2rem;
   padding: 3rem;
-  width: 725px;
+  width: 790px;
   height: auto;
   background-color: rgba(255, 255, 255, 0.3); 
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
@@ -192,27 +237,49 @@ body {
   backdrop-filter: blur(8px); 
 }
 
-.form-section label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
+.rsvp-button{
+  font-family: 'Antipasto Pro';
+  margin-top: 0.5rem;
+  font-size: 23px;
+  font-weight: 700;
+  color: #654321;
+  background-color: #E1E1CD;
+  border: 1px solid #654321;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
+
+
+.rsvp-button.clicked{
+  color: #4A772F;
+  background-color: #FFFFFF;
+  transform: scale(1.1);
+}
+
 .form-section select {
   width: 10%;
   max-width: 300px;
   padding: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   border: 1px solid #5a3e2b;
   border-radius: 0.25rem;
 
 }
 .form-section input {
   width: 100%;
-  max-width: 300px;
+  max-width: 600px;
   padding: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid #5a3e2b;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.form-section textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #5a3e2b;
+  border-radius: 0.5rem;
 }
 
 .input-container{
@@ -225,7 +292,7 @@ align-items: center;
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .form-section .yes-no-buttons button {
   padding: 0.5rem 1rem;
@@ -239,18 +306,20 @@ align-items: center;
   width: 200px;
 }
 
-.button-form{
+.button-form {
   border: 1px solid green;
-  background-color: green;
+  background-color: rgb(4, 102, 4);
   color: white;
   padding: 8px 15px;
   border-radius: 10px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 1.3rem;
 }
 
-.selected {
-  background-color: #008829; 
-  border: 2px solid #4CAF50; 
-  color: white;
+.button-form.clicked {
+  background-color: darkgreen; 
+  border-color: darkgreen;
 }
 
 .footer-container{
@@ -262,4 +331,22 @@ align-items: center;
   height: 20px;
   vertical-align: middle; 
   display: inline-block;
+}
+
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation class */
+.fade-down {
+  display: block;
+  animation: fadeDown 0.8s ease forwards;
 }

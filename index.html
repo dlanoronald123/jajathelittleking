@@ -29,9 +29,9 @@
         <p class="date">2025</p>
       </div>
       <div class="events-container mb-4">
-        <span class="">Villa Alonzo Private Pool and Event Place</span>
+        <span class="events-title">LyLo Private Pool and Events Place</span>
         <br />
-        <span class="">Phase 1, 127 San Anto St., Rosaryville Avenue, Guiguinto, Bulacan</span>
+        <span class="">Rosaryville Phase 2, Block 5 Lot 5 Jade Street, Guiguinto, 3015 Bulacan</span>
       </div>
       <div class="navigate-track">
         <div class="maps-container mx-auto">
@@ -42,10 +42,11 @@
               <span> Show the Way! </span>
               <i class="fas fa-solid fa-caret-down"></i>
             </div>
-            <select class="absolute inset-0 opacity-0 w-full h-full cursor-pointer">
-              <option value="option1">Waze</option>
-              <option value="option2">Google Maps</option>
+            <select class="absolute inset-0 opacity-0 w-full h-full cursor-pointer" onchange="handleSelectChangeMap(event)">
+              <option value="waze">Waze</option>
+              <option value="google-maps">Google Maps</option>
             </select>
+
           </div>
         </div>
         <div class="maps-container mx-auto">
@@ -56,77 +57,93 @@
               <span> Add to Calendar </span>
               <i class="fas fa-solid fa-caret-down"></i>
             </div>
-            <select class="absolute inset-0 opacity-0 w-full h-full cursor-pointer">
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
+            <select class="absolute inset-0 opacity-0 w-full h-full cursor-pointer" onchange="handleSelectChangeCalendar(event)">
+              <option value="google">Google Calendar</option>
+              <option value="apple">Apple Calendar</option>
             </select>
           </div>
         </div>
       </div>
       <form id="form" class="form-section text-center">
         <button class="rsvp-title text-center">RSVP</button>
-        <p class="text-center mb-6">
+        <p class="text-center mb-6 kindly-text">
           Kindly respond as soon as possible to celebrate the dedication of our little cub, Jaja, as we lift him in prayer
           and love.
         </p>
-
+      
         <!-- Attendance Buttons -->
         <div class="rsvp-container flex justify-evenly gap-4 mb-4">
           <button type="button" class="attendance-button text-center" value="yes" onclick="updateAttendance(this)"
             name="Attendance">
-            <img alt="Lion illustration" class="w-12 h-12 mx-auto mb-2" src="img/no.png" />
+            <img alt="Lion illustration" class="attendance-img mx-auto mb-2" src="img/no.png" />
             <p class="attend-text">I will be roaring with joy!</p>
           </button>
           <button type="button" class="attendance-button text-center" value="no" onclick="updateAttendance(this)"
             name="Attendance">
-            <img alt="Lion illustration" class="w-12 h-12 mx-auto mb-2" src="img/no.png" />
+            <img alt="Lion illustration" class="attendance-img mx-auto mb-2" src="img/no.png" />
             <p class="attend-text">I will be roaring from afar...</p>
           </button>
         </div>
-
+      
         <!-- Hidden inputs to store Attendance and Cubs values -->
         <input type="hidden" id="attendance-value" name="Attendance" />
         <input type="hidden" id="cubs-value" name="Cubs" />
-
-        <p class="block mb-4 guest" for="guests">How many guests will join the safari?</p>
-        <select class="mb-4 p-2 border rounded count" id="guests" name="Guests count">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-
+      
+        <!-- Container for optional elements -->
+        <div id="optional-elements" class="fade-down">
+          <p class="block mb-4 form-text">How many guests will join the safari?</p>
+          <select class="mb-4 p-2 border rounded count" id="guests" name="Guests count">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+        </div>
         <div class="input-container">
-          <input class="block w-full mb-4 p-2 border rounded" placeholder="NAME" type="text" id="name" name="Name"
+          <label for="adventure-note-text" class="block adventure-text">NAME</label>
+          <input class="block w-full mb-4 p-2 border rounded"  type="text" id="name" name="Name" required />
+          <label for="adventure-note-text" class="block adventure-text">MOBILE</label>
+          <input class="block w-full mb-4 p-2 border rounded"  type="text" id="contactno" name="Contact"
             required />
-          <input class="block w-full mb-4 p-2 border rounded" placeholder="MOBILE" type="text" id="contactno"
-            name="Contact" required />
         </div>
-
-        <!-- Cubs Buttons -->
-        <p class="mb-4">Will you be bringing your little cubs to the celebration?</p>
-        <div class="yes-no-buttons flex justify-center gap-4 mb-4">
-          <button type="button" class="rsvp-button" value="yes" onclick="selectButton(this)" name="Cubs">Of
-            course</button>
-          <button type="button" class="rsvp-button" value="no" onclick="selectButton(this)" name="Cubs">No kids</button>
+        <div id="optional-elements2" class="fade-down">
+          <p class="mb-4 will-text">Will you be bringing your little cubs to the celebration?</p>
+          <div class="yes-no-buttons flex justify-center gap-4 mb-4">
+            <button type="button" class="rsvp-button" value="yes" onclick="selectButton(this)" name="Cubs">Of course</button>
+            <button type="button" class="rsvp-button" value="no" onclick="selectButton(this)" name="Cubs">No kids</button>
+          </div>
+          <div id="optional-elements3" style="display: none; opacity: 0;">
+            <label class="block mb-2 will-text" for="cubs">If yes, how many cubs will be joining the adventure?</label>
+            <select class="mb-4 p-2 border rounded" id="cubs" name="Cubs count">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
         </div>
-
-        <label class="block mb-2" for="cubs">If yes, how many cubs will be joining the adventure?</label>
-        <select class="mb-4 p-2 border rounded" id="cubs" name="Cubs count">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-
+      
+        <!-- Adventure Note (hidden initially) -->
+        <div id="adventure-note" style="display: none;" class="fade-down">
+          <label for="adventure-note-text" class="block adventure-text">ADVENTURE NOTE</label>
+          <textarea id="adventure-note-text" name="Adventure Note" class="block w-full mb-4 p-2 border rounded"></textarea>
+        </div>
+      
         <div>
           <button class="button-form" id="submit-button" type="submit">Submit</button>
         </div>
+        <div id="message" style="display: none;"></div>
       </form>
+      
 
-      <div id="message" style="display: none;"></div>
       <div class="footer-container">
         <p class="text-center mt-4">
           Loved by Mommy &amp; Daddy <img src="img/lion.png" alt="Heart icon" class="footer-icon">
