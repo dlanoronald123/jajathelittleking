@@ -22,8 +22,8 @@
       <div class="date-container">
         <p class="date">JANUARY</p>
         <div class="ml-6 flex items-center justify-center">
-          <p class="date-time">SUNDAY</p>
-          <p class="date-num">05</p>
+          <p class="date-time">SATURDAY</p>
+          <p class="date-num">04</p>
           <p class="date-time">11:00 AM</p>
         </div>
         <p class="date">2025</p>
@@ -64,7 +64,7 @@
           </div>
         </div>
       </div>
-      <form id="form" class="form-section text-center">
+      <form id="form" class="form-section text-center" onsubmit="return validateAttendance()">
         <button class="rsvp-title text-center">RSVP</button>
         <p class="text-center mb-6 kindly-text">
           Kindly respond as soon as possible to celebrate the dedication of our little cub, Jaja, as we lift him in prayer
@@ -75,7 +75,7 @@
         <div class="rsvp-container flex justify-evenly gap-4 mb-4">
           <button type="button" class="attendance-button text-center" value="yes" onclick="updateAttendance(this)"
             name="Attendance">
-            <img alt="Lion illustration" class="attendance-img mx-auto mb-2" src="img/no.png" />
+            <img alt="Lion illustration" class="attendance-img mx-auto mb-2" src="img/yes.png" />
             <p class="attend-text">I will be roaring with joy!</p>
           </button>
           <button type="button" class="attendance-button text-center" value="no" onclick="updateAttendance(this)"
@@ -107,10 +107,9 @@
         </div>
         <div class="input-container">
           <label for="adventure-note-text" class="block adventure-text">NAME</label>
-          <input class="block w-full mb-4 p-2 border rounded"  type="text" id="name" name="Name" required />
+          <input class="block w-full mb-4 p-2 border rounded" type="text" id="name" name="Name" required />
           <label for="adventure-note-text" class="block adventure-text">MOBILE</label>
-          <input class="block w-full mb-4 p-2 border rounded"  type="text" id="contactno" name="Contact"
-            required />
+          <input class="block w-full mb-4 p-2 border rounded" type="text" id="contactno" name="Contact" required />
         </div>
         <div id="optional-elements2" class="fade-down">
           <p class="mb-4 will-text">Will you be bringing your little cubs to the celebration?</p>
@@ -137,11 +136,15 @@
           <textarea id="adventure-note-text" name="Adventure Note" class="block w-full mb-4 p-2 border rounded"></textarea>
         </div>
       
+        <!-- Error Message Display -->
+        <p id="attendanceError" style="color: red; display: none;">Please select an attendance option.</p>
+      
         <div>
           <button class="button-form" id="submit-button" type="submit">Submit</button>
         </div>
         <div id="message" style="display: none;"></div>
       </form>
+      
       
 
       <div class="footer-container">

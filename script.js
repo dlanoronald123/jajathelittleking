@@ -3,6 +3,7 @@ function updateAttendance(selectedButton) {
   const optionalElements = document.getElementById('optional-elements');
   const optionalElements2 = document.getElementById('optional-elements2');
   const adventureNote = document.getElementById('adventure-note');
+  
 
   buttons.forEach(btn => btn.classList.remove('clicked'));
 
