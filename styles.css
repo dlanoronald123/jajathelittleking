@@ -61,26 +61,28 @@ body {
   background-size: cover;
   background-position: center;
   padding: 0 5rem;
-  height: 30vh;
+  height: 85vh;
 }
-.invi-header{
+
+.invi-header {
   font-size: 1rem;
   line-height: 1.2rem;
-  padding: 0 15rem;
+  padding: 0 30rem;
 }
+
 .name {
   font-family: 'Regal Love', 'Great Vibes', cursive;
   font-size: 10rem;
   line-height: 8.5rem;
   padding: 0 5rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 .date-container{
-  margin-top: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: -13rem;
 }
 
 .date {
@@ -108,8 +110,6 @@ body {
   padding: 0 1rem;
 }
 
-
-
 .events-container{
   margin-top: 6rem;
   margin-bottom: 3rem;
@@ -124,6 +124,7 @@ body {
 
 .navigate-track{
   display: flex;
+  justify-content: space-around;
 }
 .maps-container{
   margin-top: 3rem;
@@ -323,7 +324,7 @@ align-items: center;
 }
 
 .footer-container{
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
 }
 
 .footer-icon {
@@ -366,3 +367,337 @@ align-items: center;
 .attendance-button.clicked {
   animation: button-click 0.3s ease-in-out;
 }
+
+
+@media (max-width: 480px)  {
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: #FEFAEF;
+    color: #5a3e2b;
+  }
+  .header-container {
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  .context-container {
+    background-image: url("img/bg.png");
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 35vh;
+  }
+
+  .invi-header{
+    font-size: 0.5rem;
+    line-height: 12px;
+    padding: 0 5rem;
+  }
+  .name {
+    font-family: 'Regal Love', 'Great Vibes', cursive;
+    font-size: 5rem;
+    line-height: 3.5rem;
+    padding: 0 5rem;
+    margin-top: 2rem;
+  }
+  .date-container{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .date {
+    font-family: 'Simple Alphabet', 'Great Vibes';
+    font-size: 1.5rem;
+    line-height: 0;
+  }
+  .date-num {
+    font-family: 'Simple Alphabet', 'Great Vibes';
+    font-size: 4rem;
+    margin: 0;
+    margin: 0 0.5rem;
+  }
+  .date-time {
+    font-family: 'Simple Alphabet', 'Great Vibes';
+    font-size: 1.5rem;
+    border-top: 1px solid #5a3e2b;
+    border-bottom: 1px solid #5a3e2b;
+    margin: 0;
+  }
+  .section-title {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 0 1rem;
+    margin-bottom: 6px
+  }
+
+
+  .events-container{
+    margin-top: 3rem;
+    margin: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Avenir LT Std';
+  }
+
+  .events-title{
+    font-family: 'Avenir LT Std Heavy';
+  }
+
+  .navigate-track{
+    display: flex;
+    padding: 0 2rem;
+    width: auto;
+    justify-content: space-between;
+  }
+  .maps-container{
+    margin-top: 1rem;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #4a4a4a;
+    padding: 0.2rem;
+    margin-bottom: 1rem;
+    margin: 0 11px 10px;
+    cursor: pointer;
+    background-color: white;
+    cursor: pointer;
+  }
+  .button img {
+    width: 25px;
+    height: 25px;
+  }
+  .button span {
+    flex-grow: 1;
+    text-align: center;
+    color: #057a00;
+    font-size: 10px;
+  }
+  .button i {
+    color: #5a3e2b;
+  }
+  .rsvp-section {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .rsvp-title {
+    font-family: 'Antipasto Pro Bold';
+    font-size: 1.5rem;
+    top:-30px;
+    right: 142px;
+    padding: 1rem;
+    position: absolute;
+    background-color: #FEFAEF;
+  }
+
+
+  .rsvp-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 1rem;
+  }
+
+  .rsvp-section img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .attendance-img{
+    width: 3rem;
+    height: 3rem
+  }
+  .kindly-text {
+    font-family: 'Avenir LT Std';
+    margin-top: 0.8rem;
+    font-size: 9px;
+    font-weight: 400;
+  }
+  .form-text {
+    font-family: 'Antipasto Pro';
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 11px;
+    font-weight: 700;
+    color: #4A772F;
+  }
+  .will-text {
+    font-family: 'Antipasto Pro';
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .adventure-text{
+    font-family: 'Antipasto Pro';
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .rsvp-section p span {
+    display: block;
+    font-size: 0.875rem;
+    color: #5a3e2b;
+  }
+
+  .attend-text{
+    font-family: 'Simple Alphabet', 'Great Vibes';
+    font-size: 13px;
+    line-height: 1;
+
+  }
+  .form-section {
+    position: relative;
+    margin: 2rem 2rem 0 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    width: auto;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+    border-radius: 10px;
+    backdrop-filter: blur(8px); 
+  }
+
+  .rsvp-button{
+    font-family: 'Antipasto Pro';
+    margin-top: 0.5rem;
+    font-size: 15px;
+    font-weight: 700;
+    color: #654321;
+    background-color: #E1E1CD;
+    border: 1px solid #654321;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  }
+
+
+  .rsvp-button.clicked{
+    color: #4A772F;
+    background-color: #FFFFFF;
+    transform: scale(1.1);
+  }
+
+  .form-section select {
+    width: 17%;
+    max-width: 300px;
+    padding: 0.2rem;
+    margin-bottom: 1rem;
+    border: 1px solid #5a3e2b;
+    border-radius: 0.25rem;
+    font-size: 10px;
+
+  }
+  .form-section input {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #5a3e2b;
+    border-radius: 0.3rem;
+    font-size: 10px;
+  }
+
+  .form-section textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #5a3e2b;
+    border-radius: 0.3rem;
+    font-size: 10px;
+
+  }
+
+  .input-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  .form-section .yes-no-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .form-section .yes-no-buttons button {
+    padding: 0.3rem 0.5rem;
+    border: 1px solid #4a4a4a;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  .divider {
+    border-top: 3px solid #5a3e2b;
+    margin: 1rem 0;
+    width: 200px;
+  }
+
+  .button-form {
+    border: 1px solid green;
+    background-color: rgb(4, 102, 4);
+    color: white;
+    padding: 5px 9px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+  }
+
+  .button-form.clicked {
+    background-color: darkgreen; 
+    border-color: darkgreen;
+  }
+
+  .footer-container{
+    font-size: 12px;
+    padding-bottom: 1rem;
+  }
+
+  .footer-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle; 
+    display: inline-block;
+  }
+
+
+  @keyframes fadeDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-down {
+    display: block;
+    animation: fadeDown 0.8s ease forwards;
+  }
+
+
+  @keyframes button-click {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .attendance-button.clicked {
+    animation: button-click 0.3s ease-in-out;
+  }
+}
+

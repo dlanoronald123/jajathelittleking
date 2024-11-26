@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <title>Jaja's Website Invitation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
@@ -12,7 +13,7 @@
   <body class="flex flex-col items-center justify-center">
     <section class="context-container">
       <div class="header-container">
-        <p class="text-sm mb-8 invi-header">
+        <p class="mb-8 invi-header">
           WE INVITE YOU TO CELEBRATE OUR LITTLE ONE’S DEDICATION AND FIRST
           BIRTHDAY AS WE REJOICE IN HIS FIRST YEAR AND DEDICATE HIM TO THE LORD
         </p>
@@ -21,7 +22,7 @@
     <section>
       <div class="date-container">
         <p class="date">JANUARY</p>
-        <div class="ml-6 flex items-center justify-center">
+        <div class="flex items-center justify-center">
           <p class="date-time">SATURDAY</p>
           <p class="date-num">04</p>
           <p class="date-time">11:00 AM</p>
@@ -34,30 +35,32 @@
         <span class="">Rosaryville Phase 2, Block 5 Lot 5 Jade Street, Guiguinto, 3015 Bulacan</span>
       </div>
       <div class="navigate-track">
-        <div class="maps-container mx-auto">
+        <div class="maps-container">
           <div class="section-title text-center">NAVIGATE THE JUNGLE</div>
-          <div class="relative mx-auto max-w-md">
+          <div class="relative">
             <div class="button">
               <img alt="Navigate illustration" height="50" src="img/navigate.png" width="50" />
               <span> Show the Way! </span>
               <i class="fas fa-solid fa-caret-down"></i>
             </div>
-            <select class="absolute inset-0 opacity-0 w-full h-full cursor-pointer" onchange="handleSelectChangeMap(event)">
+            <select class="absolute inset-0 opacity-0 w-full h-full cursor-pointer"  
+              onchange="handleSelectChangeMap(event)">
               <option value="waze">Waze</option>
               <option value="google-maps">Google Maps</option>
             </select>
 
           </div>
         </div>
-        <div class="maps-container mx-auto">
+        <div class="maps-container">
           <div class="section-title text-center">TRACK YOUR ADVENTURE</div>
-          <div class="relative mx-auto max-w-md">
+          <div class="relative">
             <div class="button">
               <img alt="Track illustration" height="50" src="img/track.png" width="50" />
               <span> Add to Calendar </span>
               <i class="fas fa-solid fa-caret-down"></i>
             </div>
-            <select class="absolute inset-0 opacity-0 w-full h-full cursor-pointer" onchange="handleSelectChangeCalendar(event)">
+            <select class="absolute inset-0 opacity-0 w-full h-full cursor-pointer" 
+              onchange="handleSelectChangeCalendar(event)">
               <option value="google">Google Calendar</option>
               <option value="apple">Apple Calendar</option>
             </select>

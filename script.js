@@ -34,20 +34,31 @@ function updateAttendance(selectedButton) {
 }
 
 function handleSelectChangeMap(event) {
-  if (event.target.value === 'google-maps') {
-    window.open('https://maps.app.goo.gl/eLwsSL3Yd2RtcZLG9', '_blank');
+  const selectedValue = event.target.value;
+  let url;
+  if (selectedValue === 'google-maps') {
+    url = 'https://maps.app.goo.gl/eLwsSL3Yd2RtcZLG9'
   } else {
-    window.open('https://www.waze.com/en/live-map/directions/ph/central-luzon/guiguinto/lylo-private-pool-and-events-place?place=ChIJrVrybEBTljMRt5hy6hSYVqk&utm_campaign=default&utm_medium=lm_share_directions&utm_source=waze_website', '_blank');
+    url = 'https://www.waze.com/en/live-map/directions/ph/central-luzon/guiguinto/lylo-private-pool-and-events-place?place=ChIJrVrybEBTljMRt5hy6hSYVqk&utm_campaign=default&utm_medium=lm_share_directions&utm_source=waze_website'
+  }
 
+  if (url) {
+    window.open(url, "_blank"); 
   }
 }
 
 function handleSelectChangeCalendar(event) {
-  if (event.target.value === 'google') {
-    window.open('https://calendar.app.google/qSVRFPFssWsTS8xk8', '_blank');
-  } else {
-    window.open('http://caldav.icloud.com/published/2/MjE1MjU1Nzk5OTYyMTUyNaNIv55h8YOrW3EA5PTs5kLu3uV9pWVZ-LN_3l-EeUDvgoVzu-WXkXKMYtgjgkRP9eLRPKmEbcqkrnZYMwOCHVs', '_blank');
+  const selectedValue = event.target.value;
+  let url;
 
+  if (selectedValue === 'google') {
+    url = 'https://calendar.app.google/qSVRFPFssWsTS8xk8'
+  } else {
+    url = 'http://caldav.icloud.com/published/2/MjE1MjU1Nzk5OTYyMTUyNaNIv55h8YOrW3EA5PTs5kLu3uV9pWVZ-LN_3l-EeUDvgoVzu-WXkXKMYtgjgkRP9eLRPKmEbcqkrnZYMwOCHVs'
+  }
+
+  if (url) {
+    window.open(url, "_blank"); 
   }
 }
 
